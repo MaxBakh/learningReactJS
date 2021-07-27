@@ -3,12 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom'
+import Router from './Router/Router'
 
 const mesCon = 'kind of magic'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App message={mesCon} />
+    <BrowserRouter>
+      {/* <App message={mesCon} /> */}
+      <Router />
+    </BrowserRouter>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
