@@ -3,13 +3,23 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom'
+import Router from './Router/Router'
+import { Provider } from 'react-redux';
+import { store } from "./store"
+import './service/firebase'
 
-const mesCon = 'kind of magic'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App message={mesCon} />
-  </React.StrictMode>,
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+        <Router />
+      </BrowserRouter>
+    </Provider>
+  </React.StrictMode >,
+
   document.getElementById('root')
 );
 
